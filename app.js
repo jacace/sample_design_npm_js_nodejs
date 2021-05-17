@@ -16,6 +16,7 @@ app.get('/', function (req, res) {
 	});
 });
 
+//1. Sample Consistent Hashing
 const ConsistentHashing = require('./1.ConsistentHashing/ConsistentHashing.js');
 const ch = new ConsistentHashing();
 ch.testModuloOperation();

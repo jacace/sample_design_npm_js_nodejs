@@ -43,6 +43,14 @@ module.exports = class ConsistentHashing {
         console.log(nodes);
     }
 
+    //Solution 2: Consistent Hashing
+    // a. It is a distributed hashing scheme that operates independently of the number of servers
+    //    or objects in a distributed hash table by assigning them a position on an 
+    //    abstract circle, or hash ring
+    //    when a new node is added, only a subset (K/n) of keys need to be remapped
+    // b. each server is assigned multiple hash values based on its name or ID, 
+    //    and each request is assigned to the server with the “nearest” hash value. 
+    // c. Consistent Hashing Is Used by Load Balancers to Distribute Requests, data Partitioning, etc
     testConsistentHashing() {
         var chLib = require('consistent-hashing');
         var servers = new chLib(['emea', 'nam', 'apac']);
@@ -70,13 +78,18 @@ module.exports = class ConsistentHashing {
         //2007: last.fm’s Ketama memcached client and Dynamo: Amazon’s Highly Available Key-value Store
     }
 
+    //Solution 3: Rendezvous Hashing
+    testRendezvousHashing()
+    {
 
+    }
 
+    //Solution 4: Jump Consistent Hash
+    testJumpConsistentHash()
+    {
+        
+    }
 
-    //where each server is assigned multiple hash values based on its name or ID, 
-
-    //REHASHING Hk(key) = [GetHash(key) + k * (1 + (((GetHash(key) >> 5) + 1) % (hashsize – 1)))] % hashsize 
-
-    //Consistent hashing: special kind of hashing such that when a hash table is resized only a subset of keys need to be remapped (in normal hashes the position is a modular operation) used in Data partition and replication.
+    //REHASHING Hk(key) = [GetHash(key) + k * (1 + (((GetHash(key) >> 5) + 1) % (hashsize – 1)))] % hashsize     
 
 }
