@@ -1,1 +1,1 @@
-Sample application to showcase deign patterns implementation in nodejs
+Sample application to showcase design patterns implementation in nodejs

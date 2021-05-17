@@ -16,6 +16,12 @@ app.get('/', function (req, res) {
 	});
 });
 
+const ConsistentHashing = require('./1.ConsistentHashing/ConsistentHashing.js');
+const ch = new ConsistentHashing();
+ch.testModuloOperation();
+ch.testModNHashing();
+ch.testConsistentHashing();
+
 app.post('/', function (req, res) {
 	let eventType = req.body.eventtype;
 	let eventData = req.body.eventdata;
