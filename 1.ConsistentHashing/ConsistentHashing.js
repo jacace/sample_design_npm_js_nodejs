@@ -5,7 +5,7 @@ module.exports = class ConsistentHashing {
     }
 
     //returns the remainder of a division, after one number is divided
-    //by another (i.e.: modulus of the operation)
+    //by another (i.e.: modulo of the operation)
     testModuloOperation() {
         let remainder = 10 % 1; //always zero
         console.log("Remainder is: " + remainder);
@@ -16,7 +16,7 @@ module.exports = class ConsistentHashing {
 
     //Solution 1: mod-N hashing
     testModNHashing() {
-        var servers = ['emea', 'nam', 'apac']
+        var servers = ['emea', 'nam', 'apac', 'latam']
         for (var i = 0; i < servers.length; i++) {
             console.log('Server at [' + i + ']:' + servers[i]);
         }
@@ -53,7 +53,7 @@ module.exports = class ConsistentHashing {
     // c. Consistent Hashing Is Used by Load Balancers to Distribute Requests, data Partitioning, etc
     testConsistentHashing() {
         var chLib = require('consistent-hashing');
-        var servers = new chLib(['emea', 'nam', 'apac']);
+        var servers = new chLib(['emea', 'nam', 'apac', 'latam']);
 
         var nodes = {};
         var chars = [
@@ -87,7 +87,7 @@ module.exports = class ConsistentHashing {
     //Solution 4: Jump Consistent Hash
     testJumpConsistentHash()
     {
-        
+
     }
 
     //REHASHING Hk(key) = [GetHash(key) + k * (1 + (((GetHash(key) >> 5) + 1) % (hashsize – 1)))] % hashsize     

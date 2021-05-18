@@ -23,6 +23,9 @@ ch.testModuloOperation();
 ch.testModNHashing();
 ch.testConsistentHashing();
 
+//2. Template Method Design Pattern
+const CommodityNodejsPipelineAsCode = require('./2.TemplateMethodDesignPattern/CommodityNodejsPipelineAsCode.js');
+const CommodityAKSPipelineAsCode = require('./2.TemplateMethodDesignPattern/CommodityIaCPipelineAsCode.js');
 app.post('/', function (req, res) {
 	let eventType = req.body.eventtype;
 	let eventData = req.body.eventdata;

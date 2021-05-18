@@ -1,4 +1,4 @@
-class CommodityNodejsPipelineAsCode {
+module.exports = class CommodityNodejsPipelineAsCode {
 
 	constructor(initData) {
 		this.initData = initData;

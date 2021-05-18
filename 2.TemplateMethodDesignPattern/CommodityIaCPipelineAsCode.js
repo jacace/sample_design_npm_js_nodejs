@@ -1,4 +1,4 @@
-class CommodityAKSPipelineAsCode {
+module.exports = class CommodityAKSPipelineAsCode {
 
 	constructor(initData) {
 		this.initData = initData;
